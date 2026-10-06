@@ -1,0 +1,344 @@
+<div class="dthk-container">
+    <div class="dthk-header">
+        <h1>DƯƠNG TRẠCH – NHÀ CHÍNH HƯỚNG – VẬN 9</h1>
+        <p>Sao cửu tử (9): Vượng tinh • Sao nhất bạch (1): Sinh tinh • Sao nhị hắc (2): Tiến tinh</p>
+    </div>
+
+    <div class="dthk-input-area">
+        <div class="dthk-input-box">
+            <label for="solarDate">Chọn năm XD</label>
+            <input type="date" id="solarDate">
+        </div>
+
+        <div class="dthk-input-box">
+            <label for="solarHour">Giờ</label>
+            <input type="number" id="solarHour" min="0" max="23" value="0">
+        </div>
+
+        <div class="dthk-input-box">
+            <label for="huong">Chọn hướng</label>
+            <select id="huong">
+                <option value="">-- chọn --</option>
+                <option value="nham">Nhâm</option>
+                <option value="ti">Tý</option>
+                <option value="quy">Quý</option>
+                <option value="suu">Sửu</option>
+                <option value="can">Cấn</option>
+                <option value="dan">Dần</option>
+                <option value="giap">Giáp</option>
+                <option value="mao">Mão</option>
+                <option value="at">Ất</option>
+                <option value="thin">Thìn</option>
+                <option value="ton">Tốn</option>
+                <option value="Tỵ">Tỵ</option>
+                <option value="binh">Bính</option>
+                <option value="ngo">Ngọ</option>
+                <option value="dinh">Đinh</option>
+                <option value="mui">Mùi</option>
+                <option value="khon">Khôn</option>
+                <option value="than">Thân</option>
+                <option value="canh">Canh</option>
+                <option value="dau">Dậu</option>
+                <option value="tan">Tân</option>
+                <option value="tuat">Tuất</option>
+                <option value="can_">Càn</option>
+                <option value="hoi">Hợi</option>
+            </select>
+        </div>
+
+        <div class="dthk-input-action">
+            <button id="btnXem" class="btn-xem">Xem</button>
+        </div>
+    </div>
+
+    <section class="dthk-section">
+        <h2>Tứ trụ</h2>
+        <div class="dthk-table-wrap">
+            <table class="tbl">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Năm</th>
+                        <th>Tháng</th>
+                        <th>Ngày</th>
+                        <th>Giờ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>Can Chi</b></td>
+                        <td id="canchinam"></td>
+                        <td id="canchithang"></td>
+                        <td id="canchingay"></td>
+                        <td id="canchigio"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="dthk-section">
+        <h2>1. Thông tin Dương trạch</h2>
+
+        <div class="dthk-table-wrap">
+            <table class="tbl">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Sơn</th>
+                        <th>Cung</th>
+                        <th>Số độ</th>
+                        <th>Nguyên long</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>Tọa</b></td>
+                        <td id="sontoa"></td>
+                        <td id="cungtoa"></td>
+                        <td id="dotoa"></td>
+                        <td id="longtoa"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Hướng</b></td>
+                        <td id="sonhuong"></td>
+                        <td id="cunghuong"></td>
+                        <td id="dohuong"></td>
+                        <td id="longhuong"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="dthk-table-wrap">
+            <table class="tbl">
+                <tbody>
+                    <tr><td><b>Phúc Đức</b></td><td id="phucduc"></td></tr>
+                    <tr><td><b>Thành môn phải</b></td><td id="monphai"></td></tr>
+                    <tr><td><b>Thành môn trái</b></td><td id="montrai"></td></tr>
+                    <tr><td><b>Bát sát hoàng tuyền</b></td><td id="batsat"></td></tr>
+                    <tr><td><b>Tử lộ hoàng tuyền</b></td><td id="tulo"></td></tr>
+                    <tr><td><b>Kiếp sát</b></td><td id="kiepsat"></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+<section class="dthk-section dthk-compass-section">
+    <h2>La Bàn 24 Sơn</h2>
+    <p class="dthk-note">La bàn trực quan theo hướng được chọn</p>
+
+    <div class="dthk-compass-wrapper">
+        <div class="dthk-fixed-pointer"></div>
+        <div class="dthk-compass-container">
+            <div class="dthk-compass-disc" id="dthk-compass-disc"></div>
+        </div>
+    </div>
+
+    <div class="dthk-compass-info">
+        <div id="dthk-compass-deg">0°</div>
+        <div id="dthk-compass-mountain">Sơn Tý</div>
+    </div>
+</section>
+
+    <section class="dthk-section dthk-vanban-section">
+        <h2>2. Vận bàn</h2>
+
+        <div class="vanban-wrapper">
+            <div class="vanban-header">
+                <div class="cung-ton">TỐN</div>
+                <div class="cung-ly">LY</div>
+                <div class="cung-khon">KHÔN</div>
+            </div>
+
+            <div class="vanban-middle">
+                <div class="middle-left cung-chan">CHẤN</div>
+
+                <div class="vanban">
+                    <div class="vbcell" id="dn2"></div><div class="vbcell"></div><div class="vbcell" id="dn3"></div>
+                    <div class="vbcell" id="n2"></div><div class="vbcell"></div><div class="vbcell" id="n3"></div>
+                    <div class="vbcell" id="tn2"></div><div class="vbcell"></div><div class="vbcell" id="tn3"></div>
+
+                    <div class="vbcell"></div><div class="vbcell" id="dn1"></div><div class="vbcell"></div>
+                    <div class="vbcell"></div><div class="vbcell" id="n1"></div><div class="vbcell"></div>
+                    <div class="vbcell"></div><div class="vbcell" id="tn1"></div><div class="vbcell"></div>
+
+                    <div class="vbcell" id="d2"></div><div class="vbcell"></div><div class="vbcell" id="d3"></div>
+                    <div class="vbcell" id="tc2"></div><div class="vbcell"></div><div class="vbcell" id="tc3"></div>
+                    <div class="vbcell" id="t2"></div><div class="vbcell"></div><div class="vbcell" id="t3"></div>
+
+                    <div class="vbcell"></div><div class="vbcell" id="d1"></div><div class="vbcell"></div>
+                    <div class="vbcell"></div><div class="vbcell" id="tc1"></div><div class="vbcell"></div>
+                    <div class="vbcell"></div><div class="vbcell" id="t1"></div><div class="vbcell"></div>
+
+                    <div class="vbcell" id="db2"></div><div class="vbcell"></div><div class="vbcell" id="db3"></div>
+                    <div class="vbcell" id="b2"></div><div class="vbcell"></div><div class="vbcell" id="b3"></div>
+                    <div class="vbcell" id="tb2"></div><div class="vbcell"></div><div class="vbcell" id="tb3"></div>
+
+                    <div class="vbcell"></div><div class="vbcell" id="db1"></div><div class="vbcell"></div>
+                    <div class="vbcell"></div><div class="vbcell" id="b1"></div><div class="vbcell"></div>
+                    <div class="vbcell"></div><div class="vbcell" id="tb1"></div><div class="vbcell"></div>
+                </div>
+
+                <div class="middle-right cung-doai">ĐOÀI</div>
+            </div>
+
+            <div class="vanban-footer">
+                <div class="cung-can2">CẤN</div>
+                <div class="cung-kham">KHẢM</div>
+                <div class="cung-can">CÀN</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="dthk-section">
+        <h2>3. Cách cục vận 9</h2>
+
+        <div class="dthk-table-wrap">
+            <table class="tbl">
+                <thead>
+                    <tr><th></th><th>Cách cục</th><th>Ghi chú</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>1</td><td id="cc1"></td><td id="ghichucc1"></td></tr>
+                    <tr><td>2</td><td id="cc2"></td><td id="ghichucc2"></td></tr>
+                    <tr><td>3</td><td id="cc3"></td><td id="ghichucc3"></td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="dthk-section">
+        <h2>4. Long vận</h2>
+
+        <div class="dthk-table-wrap">
+            <table class="tbl">
+                <thead>
+                    <tr><th></th><th>Tên vận</th><th>Thơ vận</th><th>Ý nghĩa</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>Tọa</b></td>
+                        <td id="tenvantoa"></td>
+                        <td id="thovantoa"></td>
+                        <td id="ynghiatoa"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Hướng</b></td>
+                        <td id="tenvanhuong"></td>
+                        <td id="thovanhuong"></td>
+                        <td id="ynghiahuong"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="dthk-section">
+        <h2>5. Hồng phạm ngũ hành</h2>
+
+        <div class="dthk-table-wrap dthk-scroll">
+            <table class="tbl nguhanh-table">
+                <thead>
+                    <tr>
+                        <th>Sơn tọa</th>
+                        <th>Ngũ hành</th>
+                        <th>Mộ long</th>
+                        <th>NH mộ long</th>
+                        <th>Cát - Hung</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Giáp - Dần - Thìn - Tốn - Tuất - Tỵ - Tân - Thân</td>
+                        <td>Thủy</td>
+                        <td id="mo1"></td>
+                        <td id="nh1"></td>
+                        <td id="tch1"></td>
+                    </tr>
+                    <tr>
+                        <td>Sửu - Quý - Khôn - Canh - Mùi</td>
+                        <td>Thổ</td>
+                        <td id="mo2"></td>
+                        <td id="nh2"></td>
+                        <td id="tch2"></td>
+                    </tr>
+                    <tr>
+                        <td>Ngọ - Nhâm - Bính - Ất</td>
+                        <td>Hỏa</td>
+                        <td id="mo3"></td>
+                        <td id="nh3"></td>
+                        <td id="tch3"></td>
+                    </tr>
+                    <tr>
+                        <td>Mão - Càn - Tý</td>
+                        <td>Mộc</td>
+                        <td id="mo4"></td>
+                        <td id="nh4"></td>
+                        <td id="tch4"></td>
+                    </tr>
+                    <tr>
+                        <td>Càn - Hợi - Dậu - Đinh</td>
+                        <td>Kim</td>
+                        <td id="mo5"></td>
+                        <td id="nh5"></td>
+                        <td id="tch5"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="dthk-section">
+        <h2>6. Thần sát</h2>
+        <p class="dthk-note">Dữ liệu được cập nhật hàng năm</p>
+
+        <div class="thansat-wrapper">
+            <div class="thansat-grid">
+                <div class="ts-head">24 Sơn</div>
+                <div class="ts-head">Cát tinh</div>
+                <div class="ts-head">Hung tinh</div>
+
+                <div class="ts-cung">CUNG KHẢM</div>
+                <div class="ts-cell">Nhâm</div><div id="ts_nham_cat"></div><div id="ts_nham_hung"></div>
+                <div class="ts-cell">Tý</div><div id="ts_ti_cat"></div><div id="ts_ti_hung"></div>
+                <div class="ts-cell">Quý</div><div id="ts_quy_cat"></div><div id="ts_quy_hung"></div>
+
+                <div class="ts-cung">CUNG CẤN</div>
+                <div class="ts-cell">Sửu</div><div id="ts_suu_cat"></div><div id="ts_suu_hung"></div>
+                <div class="ts-cell">Cấn</div><div id="ts_can_cat"></div><div id="ts_can_hung"></div>
+                <div class="ts-cell">Dần</div><div id="ts_dan_cat"></div><div id="ts_dan_hung"></div>
+
+                <div class="ts-cung">CUNG CHẤN</div>
+                <div class="ts-cell">Giáp</div><div id="ts_giap_cat"></div><div id="ts_giap_hung"></div>
+                <div class="ts-cell">Mão</div><div id="ts_mao_cat"></div><div id="ts_mao_hung"></div>
+                <div class="ts-cell">Ất</div><div id="ts_at_cat"></div><div id="ts_at_hung"></div>
+
+                <div class="ts-cung">CUNG TỐN</div>
+                <div class="ts-cell">Thìn</div><div id="ts_thin_cat"></div><div id="ts_thin_hung"></div>
+                <div class="ts-cell">Tốn</div><div id="ts_ton_cat"></div><div id="ts_ton_hung"></div>
+                <div class="ts-cell">Tỵ</div><div id="ts_ti2_cat"></div><div id="ts_ti2_hung"></div>
+
+                <div class="ts-cung">CUNG LY</div>
+                <div class="ts-cell">Bính</div><div id="ts_binh_cat"></div><div id="ts_binh_hung"></div>
+                <div class="ts-cell">Ngọ</div><div id="ts_ngo_cat"></div><div id="ts_ngo_hung"></div>
+                <div class="ts-cell">Đinh</div><div id="ts_dinh_cat"></div><div id="ts_dinh_hung"></div>
+
+                <div class="ts-cung">CUNG KHÔN</div>
+                <div class="ts-cell">Mùi</div><div id="ts_mui_cat"></div><div id="ts_mui_hung"></div>
+                <div class="ts-cell">Khôn</div><div id="ts_khon_cat"></div><div id="ts_khon_hung"></div>
+                <div class="ts-cell">Thân</div><div id="ts_than_cat"></div><div id="ts_than_hung"></div>
+
+                <div class="ts-cung">CUNG ĐOÀI</div>
+                <div class="ts-cell">Canh</div><div id="ts_canh_cat"></div><div id="ts_canh_hung"></div>
+                <div class="ts-cell">Dậu</div><div id="ts_dau_cat"></div><div id="ts_dau_hung"></div>
+                <div class="ts-cell">Tân</div><div id="ts_tan_cat"></div><div id="ts_tan_hung"></div>
+
+                <div class="ts-cung">CUNG CÀN</div>
+                <div class="ts-cell">Tuất</div><div id="ts_tuat_cat"></div><div id="ts_tuat_hung"></div>
+                <div class="ts-cell">Càn</div><div id="ts_can2_cat"></div><div id="ts_can2_hung"></div>
+                <div class="ts-cell">Hợi</div><div id="ts_hoi_cat"></div><div id="ts_hoi_hung"></div>
+            </div>
+        </div>
+    </section>
+</div>

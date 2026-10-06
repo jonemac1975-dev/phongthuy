@@ -1,0 +1,245 @@
+<div class="lvn-container">
+    <div class="lvn-header">
+        <div>
+            <h1>LỊCH VẠN NIÊN</h1>
+            <p>Tra cứu ngày âm lịch, Can Chi và các thông tin phong thủy</p>
+        </div>
+    </div>
+
+    <div class="lvn-input-area">
+        <div class="lvn-input-box">
+            <label for="inputDate">Ngày dương lịch</label>
+            <input type="date" id="inputDate">
+        </div>
+        <div class="lvn-input-box">
+            <label for="inputHour">Giờ</label>
+            <input type="number" id="inputHour" min="0" max="23" value="12">
+        </div>
+        
+    </div>
+
+    <section class="lvn-section lvn-summary">
+        <h2>Ngày âm lịch</h2>
+        <div class="lvn-summary-grid">
+            <div class="lvn-summary-item">
+                <span class="lvn-label">Ngày dương</span>
+                <strong id="ngayam">--</strong>
+            </div>
+            <div class="lvn-summary-item">
+                <span class="lvn-label">Ngày âm</span>
+                <strong id="am-date">--</strong>
+            </div>
+            <div class="lvn-summary-item">
+                <span class="lvn-label">Tháng âm</span>
+                <strong id="am-month">--</strong>
+            </div>
+            <div class="lvn-summary-item">
+                <span class="lvn-label">Năm âm</span>
+                <strong id="am-year">--</strong>
+            </div>
+        </div>
+    </section>
+
+    <section class="lvn-section">
+        <h2>Tứ trụ - Can Chi và Nạp Âm</h2>
+        <div class="lvn-table-wrap">
+            <table class="tbl">
+                <thead>
+                    <tr>
+                        <th>Trụ</th>
+                        <th>Thiên Can</th>
+                        <th>Địa Chi</th>
+                        <th>Nạp Âm</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Năm</td>
+                        <td id="canamnam">--</td>
+                        <td id="chinamnam">--</td>
+                        <td id="napamnam">--</td>
+                    </tr>
+                    <tr>
+                        <td>Tháng</td>
+                        <td id="canamthang">--</td>
+                        <td id="chiamthang">--</td>
+                        <td id="napamthang">--</td>
+                    </tr>
+                    <tr>
+                        <td>Ngày</td>
+                        <td id="canamngay">--</td>
+                        <td id="chiamngay">--</td>
+                        <td id="napamngay">--</td>
+                    </tr>
+                    <tr>
+                        <td>Giờ</td>
+                        <td id="canamgio">--</td>
+                        <td id="chiamgio">--</td>
+                        <td id="napamgio">--</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="lvn-section lvn-two-column">
+        <div class="lvn-card">
+            <h2>Ngày xung tuổi</h2>
+            <div class="lvn-result-box" id="tuoixung">--</div>
+        </div>
+        <div class="lvn-card">
+            <h2>Hỷ - Tài</h2>
+            <table class="tbl">
+                <tbody>
+                    <tr><td>Hỷ thần</td><td id="hythan">--</td></tr>
+                    <tr><td>Tài thần</td><td id="taithan">--</td></tr>
+                    <tr><td>Lộc</td><td id="loc">--</td></tr>
+                    <tr><td>Quý âm</td><td id="quyam">--</td></tr>
+                    <tr><td>Quý dương</td><td id="quyduong">--</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="lvn-section">
+        <h2>Tiết khí - Trực</h2>
+        <div class="lvn-two-column">
+            <div class="lvn-card">
+                <table class="tbl">
+                    <tbody>
+                        <tr><td>Tiết khí</td><td id="tiet">--</td></tr>
+                        <tr><td>Trực</td><td id="truc">--</td></tr>
+                        <tr><td>Nền</td><td id="truc_nen">--</td></tr>
+                        <tr><td>Không nền</td><td id="truc_khongnen">--</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="lvn-card">
+                <div class="lvn-info-box">
+                    <span>Thông tin Trực</span>
+                    <p id="truc_info">--</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="lvn-section">
+        <h2>Nhị Thập Bát Tú</h2>
+        <table class="tbl">
+            <tbody>
+                <tr><td>Tên sao</td><td id="sao_ten">--</td></tr>
+                <tr><td>Ngũ hành</td><td id="sao_nguhanh">--</td></tr>
+                <tr><td>Cát / Hung</td><td id="sao_cathung">--</td></tr>
+                <tr><td>Nền</td><td id="sao_nen">--</td></tr>
+                <tr><td>Không nền</td><td id="sao_khongnen">--</td></tr>
+                <tr><td>Ngoại lệ</td><td id="sao_ngoaile">--</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="lvn-section">
+    <h2>Hoàng đạo - Hắc đạo</h2>
+    <div class="lvn-two-column">
+        <div class="lvn-card">
+            <h3>🟢 Hoàng đạo</h3>
+            <table class="tbl">
+                <thead>
+                    <tr>
+                        <th>Giờ</th>
+                        <th>Chi</th>
+                    </tr>
+                </thead>
+                <tbody id="gio_hoangdao"></tbody>
+            </table>
+        </div>
+        <div class="lvn-card">
+            <h3>🔴 Hắc đạo</h3>
+            <table class="tbl">
+                <thead>
+                    <tr>
+                        <th>Giờ</th>
+                        <th>Chi</th>
+                    </tr>
+                </thead>
+                <tbody id="gio_hacdao"></tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+    <section class="lvn-section">
+        <h2>Sao tốt - Kiết tinh</h2>
+        <div class="lvn-table-wrap">
+            <table class="tbl">
+                <thead>
+                    <tr>
+                        <th>Sao</th>
+                        <th>Ghi chú</th>
+                    </tr>
+                </thead>
+                <tbody id="saotot_chitiet"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="lvn-section">
+        <h2>Sao xấu - Hung tinh</h2>
+        <div class="lvn-table-wrap">
+            <table class="tbl">
+                <thead>
+                    <tr>
+                        <th>Sao</th>
+                        <th>Ghi chú</th>
+                    </tr>
+                </thead>
+                <tbody id="saoxau_chitiet"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="lvn-section">
+        <h2>Bách Thần</h2>
+        <table class="tbl">
+            <tbody>
+                <tr><td>Nội ngữ</td><td id="bachthan_noingu">--</td></tr>
+                <tr><td>Động thổ</td><td id="bachthan_dongtho">--</td></tr>
+                <tr><td>Ý nghĩa</td><td id="bachthan_ynghia">--</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="lvn-section">
+        <h2>Đổng Công</h2>
+        <div class="lvn-result-box lvn-text-result" id="dongcong_noidung">--</div>
+    </section>
+
+    <section class="lvn-section">
+        <h2>Giờ Thái Ất</h2>
+        <table class="tbl">
+            <tbody>
+                <tr><td>Thiên Can ngày</td><td id="thaivat_can">--</td></tr>
+                <tr><td>Giờ Thái Ất</td><td id="giothaiat">--</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="lvn-section">
+        <h2>Hướng năm tốt - xấu</h2>
+        <table class="tbl">
+            <tbody>
+                <tr><td>Hướng năm tốt</td><td id="huongnamtot">--</td></tr>
+                <tr><td>Hướng năm xấu</td><td id="huongnamxau">--</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section class="lvn-section">
+        <h2>Năm xung tuổi</h2>
+        <div class="lvn-result-box" id="namxungtuoi">--</div>
+    </section>
+
+    <section class="lvn-section">
+        <h2>Tháng xung tuổi</h2>
+        <div class="lvn-result-box" id="thangxungtuoi">--</div>
+    </section>
+</div>

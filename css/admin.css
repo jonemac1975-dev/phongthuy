@@ -1,0 +1,237 @@
+/* =========================
+   TRANG QUẢN LÝ ADMIN
+========================= */
+
+.admin-page{
+    width:100%;
+    max-width:1100px;
+    margin:0 auto;
+    padding:20px;
+    box-sizing:border-box;
+}
+
+.admin-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+    padding:18px 20px;
+    margin-bottom:18px;
+    border-radius:12px;
+    background:rgba(255,255,255,.9);
+    box-shadow:0 3px 12px rgba(0,0,0,.12);
+}
+
+.admin-header h2{
+    margin:0;
+    font-size:22px;
+    color:#6b1d1d;
+}
+
+.admin-header-actions{
+    display:flex;
+    gap:8px;
+}
+
+.admin-header-actions button{
+    border:0;
+    border-radius:7px;
+    padding:8px 14px;
+    cursor:pointer;
+    background:#6b1d1d;
+    color:#fff;
+    font-weight:600;
+}
+
+.admin-header-actions button:hover{
+    opacity:.85;
+}
+
+.admin-tabs{
+    display:flex;
+    gap:8px;
+    margin-bottom:15px;
+}
+
+.admin-tab{
+    border:0;
+    padding:11px 18px;
+    border-radius:8px 8px 0 0;
+    background:#ddd;
+    color:#444;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.admin-tab.active{
+    background:#6b1d1d;
+    color:#fff;
+}
+
+.admin-tab-content{
+    display:none;
+    background:rgba(255,255,255,.94);
+    padding:20px;
+    border-radius:0 10px 10px 10px;
+    box-shadow:0 3px 12px rgba(0,0,0,.12);
+}
+
+.admin-tab-content.active{
+    display:block;
+}
+
+.admin-form{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    margin-bottom:25px;
+}
+
+.admin-form label{
+    font-weight:600;
+    color:#555;
+    margin-top:5px;
+}
+
+.admin-form input,
+.admin-form select{
+    width:100%;
+    box-sizing:border-box;
+    padding:10px 12px;
+    border:1px solid #ccc;
+    border-radius:7px;
+    font-size:15px;
+    background:#fff;
+}
+
+.admin-form input:focus,
+.admin-form select:focus{
+    outline:none;
+    border-color:#6b1d1d;
+}
+
+.admin-form-row{
+    display:flex;
+    gap:8px;
+}
+
+.admin-form-row input{
+    flex:1;
+}
+
+.admin-form button{
+    align-self:flex-start;
+    border:0;
+    border-radius:7px;
+    padding:9px 18px;
+    background:#6b1d1d;
+    color:#fff;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.admin-form button:hover{
+    opacity:.85;
+}
+
+.admin-list h3{
+    margin:0 0 10px;
+    color:#6b1d1d;
+}
+
+.admin-list table{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+}
+
+.admin-list th,
+.admin-list td{
+    padding:10px;
+    border:1px solid #ddd;
+    text-align:left;
+    vertical-align:middle;
+}
+
+.admin-list th{
+    background:#f1e7df;
+    color:#5d2424;
+    font-size:14px;
+}
+
+.admin-list th:first-child,
+.admin-list td:first-child{
+    width:55px;
+    text-align:center;
+}
+
+.admin-list th:last-child,
+.admin-list td:last-child{
+    width:130px;
+    text-align:center;
+}
+
+.admin-list button{
+    border:0;
+    border-radius:5px;
+    padding:6px 10px;
+    margin:2px;
+    cursor:pointer;
+    font-size:13px;
+}
+
+.admin-list button:first-child{
+    background:#b8860b;
+    color:#fff;
+}
+
+.admin-list button:last-child{
+    background:#a52a2a;
+    color:#fff;
+}
+
+@media(max-width:600px){
+    .admin-page{
+        padding:10px;
+    }
+
+    .admin-header{
+        flex-direction:column;
+        align-items:stretch;
+        text-align:center;
+    }
+
+    .admin-header-actions{
+        justify-content:center;
+    }
+
+    .admin-tabs{
+        gap:4px;
+    }
+
+    .admin-tab{
+        flex:1;
+        padding:10px 6px;
+        font-size:13px;
+    }
+
+    .admin-tab-content{
+        padding:12px;
+    }
+
+    .admin-form-row{
+        flex-direction:column;
+    }
+
+    .admin-form-row button{
+        align-self:stretch;
+    }
+
+    .admin-list{
+        overflow-x:auto;
+    }
+
+    .admin-list table{
+        min-width:600px;
+    }
+}

@@ -1,0 +1,71 @@
+<section class="admin-page">
+    <div class="admin-header">
+        <h2>TRANG QUẢN LÝ ADMIN</h2>
+        <div class="admin-header-actions">
+            <button id="admin-change-password">Đổi pass</button>
+            
+        </div>
+    </div>
+
+<div class="admin-tabs">
+    <button class="admin-tab active" data-tab="danhmuc">Cập nhật danh mục</button>
+    <button class="admin-tab" data-tab="tailieu">Cập nhật tài liệu</button>
+</div>
+
+<div class="admin-tab-content active" id="tab-danhmuc">
+    <div class="admin-form">
+        <label for="danhmuc-ten">Tên danh mục</label>
+        <div class="admin-form-row">
+            <input type="text" id="danhmuc-ten" placeholder="Nhập tên danh mục">
+            <button id="danhmuc-save">Lưu</button>
+        </div>
+    </div>
+
+    <div class="admin-list">
+        <h3>Danh sách danh mục</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>TÊN DANH MỤC</th>
+                    <th>HÀNH ĐỘNG</th>
+                </tr>
+            </thead>
+            <tbody id="danhmuc-list"></tbody>
+        </table>
+    </div>
+</div>
+
+<div class="admin-tab-content" id="tab-tailieu">
+    <div class="admin-form">
+        <label for="tailieu-danhmuc">Danh mục</label>
+        <select id="tailieu-danhmuc">
+            <option value="">-- Chọn danh mục --</option>
+        </select>
+
+        <label for="tailieu-ten">Tên tài liệu</label>
+        <input type="text" id="tailieu-ten" placeholder="Nhập tên tài liệu">
+
+        <label for="tailieu-link">Link GG</label>
+        <input type="text" id="tailieu-link" placeholder="Dán link Google Drive">
+
+        <button id="tailieu-save">Lưu</button>
+    </div>
+
+    <div class="admin-list">
+        <h3>Danh sách tài liệu</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>TÊN TÀI LIỆU</th>
+                    <th>LINK</th>
+                    <th>HÀNH ĐỘNG</th>
+                </tr>
+            </thead>
+            <tbody id="tailieu-list"></tbody>
+        </table>
+    </div>
+</div>
+
+</section>

@@ -1,0 +1,82 @@
+/* ==============================
+   KHAI MÔN
+============================== */
+
+.khaimon-page .dthk-filters{display:flex;flex-wrap:wrap;gap:12px;margin:0 0 18px}
+.khaimon-page .dthk-filters label{display:flex;align-items:center;gap:7px;font-weight:600;color:#6b4318}
+.khaimon-page .dthk-filters select{min-width:130px;padding:8px 10px;border:1px solid #cdbb98;border-radius:7px;background:#fffdf8;color:#4a3520;font-size:14px}
+
+.khaimon-board-wrap{width:min(100%,760px);margin:0 auto}
+.khaimon-labels{display:grid;grid-template-columns:repeat(3,1fr);width:100%}
+.khaimon-labels>div{height:42px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:14px;border:1px solid #fff}
+.khaimon-labels-top>div:nth-child(1){background:#2e7d32}
+.khaimon-labels-top>div:nth-child(2){background:#c62828}
+.khaimon-labels-top>div:nth-child(3){background:#d69a18}
+.khaimon-labels-bottom>div:nth-child(1){background:#d69a18}
+.khaimon-labels-bottom>div:nth-child(2){background:#222}
+.khaimon-labels-bottom>div:nth-child(3){background:#777}
+
+.khaimon-middle{display:grid;grid-template-columns:70px minmax(0,1fr) 70px;align-items:stretch}
+.khaimon-side{display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:14px;writing-mode:vertical-rl;letter-spacing:2px}
+.khaimon-side-left{background:#2e7d32}
+.khaimon-side-right{background:#777}
+
+/* ==============================
+   KHUNG CỬU CUNG
+============================== */
+
+.khaimon-grid{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,150px);border:2px solid #7b2020;background:#fff}
+
+.khaimon-cung{position:relative;display:block;min-width:0;border:1px solid #cdbb98;background:#fff;overflow:hidden}
+
+.khaimon-cung>div{position:absolute;display:flex;align-items:center;justify-content:center;text-align:center;box-sizing:border-box;font-weight:700;line-height:1;padding:3px}
+
+/* Sao năm - góc trên trái */
+.khaimon-cung .km-sao-nam{top:8px;left:8px;width:42px;height:32px;background:#42a5f5;color:#fff;font-size:16px;border-radius:5px}
+
+/* Sao tháng - góc trên phải */
+.khaimon-cung .km-sao-thang{top:8px;right:8px;width:42px;height:32px;background:#43a047;color:#fff;font-size:16px;border-radius:5px}
+
+/* Sao vận - chính giữa */
+.khaimon-cung .km-sao-van{top:50%;left:50%;transform:translate(-50%,-50%);width:52px;height:48px;background:#b71c1c;color:#fff;font-size:22px;border-radius:6px}
+
+/* Lộc - Mã - Quý nhân - dòng cuối */
+.khaimon-cung .km-lmq{left:0;right:0;bottom:0;height:34px;background:#fff;color:#222;font-size:13px;font-weight:400;border-top:1px solid #d8c8a8;padding:3px 5px}
+
+/* ==============================
+   PHẦN 2
+============================== */
+
+.khaimon-grid-result{grid-template-rows:repeat(3,105px)}
+.khaimon-grid-result>div{display:flex;align-items:center;justify-content:center;text-align:center;padding:10px;border:1px solid #d8c8a8;background:#fffdf8;color:#6b4318;font-size:16px;font-weight:700;box-sizing:border-box}
+.khaimon-grid-result>div:empty{color:#aaa}
+
+.khaimon-note{display:flex;justify-content:center;flex-wrap:wrap;gap:14px;margin:12px 0 4px;text-align:center;font-size:13px;font-style:italic}
+.km-note-van{color:#b71c1c}
+.km-note-nam{color:#42a5f5}
+.km-note-thang{color:#43a047}
+
+/* ==============================
+   MOBILE
+============================== */
+
+@media(max-width:768px){
+    .khaimon-page .dthk-filters{gap:8px}
+    .khaimon-page .dthk-filters label{font-size:13px}
+    .khaimon-page .dthk-filters select{min-width:110px;padding:7px 8px;font-size:13px}
+
+    .khaimon-board-wrap{width:100%;overflow-x:auto}
+    .khaimon-labels{min-width:600px}
+    .khaimon-middle{min-width:600px;grid-template-columns:55px 490px 55px}
+
+    .khaimon-grid{grid-template-rows:repeat(3,125px)}
+    .khaimon-cung .km-sao-nam{top:6px;left:6px;width:36px;height:27px;font-size:13px}
+    .khaimon-cung .km-sao-thang{top:6px;right:6px;width:36px;height:27px;font-size:13px}
+    .khaimon-cung .km-sao-van{width:45px;height:40px;font-size:18px}
+    .khaimon-cung .km-lmq{height:29px;font-size:11px}
+
+    .khaimon-grid-result{grid-template-rows:repeat(3,90px)}
+    .khaimon-side{font-size:12px}
+    .khaimon-labels>div{height:36px;font-size:12px}
+    .khaimon-grid-result>div{font-size:14px}
+}

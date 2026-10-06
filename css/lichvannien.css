@@ -1,0 +1,58 @@
+.lvn-container{width:100%;margin:0 auto 30px;background:#fffdf8;color:#342b22}
+.lvn-header{padding:24px 20px;text-align:center;background:linear-gradient(135deg,#4b1f1f,#762f28);color:#f7e7bd;border-bottom:3px solid #c69b45}
+.lvn-header h1{margin:0;font-size:25px;letter-spacing:2px}
+.lvn-header p{margin:7px 0 0;font-size:13px;color:#ead9b2}
+.lvn-input-area{display:grid;grid-template-columns:1fr 180px 140px;gap:14px;padding:18px 20px;background:#f7f1e5;border-bottom:1px solid #dfcfb0}
+.lvn-input-box label{display:block;margin-bottom:6px;font-size:13px;font-weight:700;color:#60302b}
+.lvn-input-box input{width:100%;height:40px;border:1px solid #cdbb98;border-radius:8px;background:#fff;color:#342b22;padding:0 10px;font-size:14px}
+.lvn-input-box input:focus{outline:none;border-color:#a57936;box-shadow:0 0 0 2px rgba(181,139,69,.15)}
+.lvn-input-action{display:flex;align-items:end}
+.btn-xem{width:100%;height:40px;border:0;border-radius:8px;background:linear-gradient(135deg,#7a3028,#542321);color:#f8e6b6;font-weight:700;cursor:pointer}
+.btn-xem:hover{transform:translateY(-1px);box-shadow:0 5px 12px rgba(75,35,30,.2)}
+.lvn-section{margin:20px}
+.lvn-section h2{margin:0 0 10px;padding:9px 13px;border-left:4px solid #b58b45;border-radius:0 7px 7px 0;background:#f3e8d3;color:#582723;font-size:16px}
+.lvn-summary{padding:0}
+.lvn-summary-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.lvn-summary-item{padding:13px 12px;text-align:center;background:#fbf7ed;border:1px solid #dfcfb0;border-radius:9px}
+.lvn-label{display:block;margin-bottom:5px;font-size:12px;color:#817568}
+.lvn-summary-item strong{font-size:16px;color:#5b2925}
+.lvn-two-column{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.lvn-card{min-width:0}
+.lvn-table-wrap{width:100%;overflow-x:auto}
+.tbl{width:100%;border-collapse:collapse;background:#fff;border:1px solid #dfcfb0}
+.tbl th{padding:9px 10px;background:#5b2925;color:#f4dfaa;border:1px solid #75453e;font-size:12px;text-align:left}
+.tbl td{padding:9px 10px;border:1px solid #e3d7c1;font-size:13px;vertical-align:top}
+.tbl tbody tr:nth-child(even) td{background:#fbf7ed}
+.tbl td:first-child{width:180px;font-weight:600;color:#634039}
+.lvn-result-box{min-height:42px;padding:11px 13px;background:#fbf7ed;border:1px solid #dfcfb0;border-radius:8px;color:#4d4037;font-size:13px}
+.lvn-text-result{white-space:pre-line;line-height:1.7}
+.lvn-info-box{height:100%;min-height:120px;padding:14px;background:#fbf7ed;border:1px solid #dfcfb0;border-radius:9px}
+.lvn-info-box span{display:block;margin-bottom:7px;font-weight:700;color:#63302b}
+.lvn-info-box p{margin:0;color:#594d43;font-size:13px;line-height:1.7}
+#canamnam,#chinamnam,#canamthang,#chiamthang,#canamngay,#chiamngay,#canamgio,#chiamgio{font-weight:700;color:#592622}
+#napamnam,#napamthang,#napamngay,#napamgio{font-weight:700;color:#8a5d20}
+#ngayam{color:#6b5548}
+#tuoixung,#hythan,#taithan,#loc,#quyam,#quyduong,#tiet,#truc,#truc_nen,#truc_khongnen,#sao_ten,#sao_nguhanh,#sao_cathung,#sao_nen,#sao_khongnen,#sao_ngoaile,#bachthan_noingu,#bachthan_dongtho,#bachthan_ynghia,#giothaiat,#huongnamtot,#huongnamxau,#namxungtuoi,#thangxungtuoi{color:#4d4037}
+#gio_list td:first-child,#saotot_chitiet td:first-child,#saoxau_chitiet td:first-child{font-weight:700;color:#5b2925}
+#gio_list td,#saotot_chitiet td,#saoxau_chitiet td{font-size:12px}
+@media(max-width:800px){
+.lvn-input-area{grid-template-columns:1fr 140px}
+.lvn-input-action{grid-column:1 / -1}
+.lvn-two-column{grid-template-columns:1fr}
+.lvn-summary-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:520px){
+.lvn-header{padding:20px 12px}
+.lvn-header h1{font-size:20px;letter-spacing:1px}
+.lvn-header p{font-size:12px}
+.lvn-input-area{grid-template-columns:1fr;padding:14px 12px;gap:10px}
+.lvn-input-action{grid-column:auto}
+.lvn-section{margin:14px 12px}
+.lvn-section h2{font-size:15px;padding:8px 10px}
+.lvn-summary-grid{grid-template-columns:1fr 1fr;gap:8px}
+.lvn-summary-item{padding:10px 7px}
+.lvn-summary-item strong{font-size:14px}
+.tbl th,.tbl td{padding:8px 7px;font-size:12px}
+.tbl td:first-child{width:120px}
+.lvn-result-box{font-size:12px}
+}

@@ -1,0 +1,203 @@
+<div class="bm-container">
+    <div class="bm-header">
+        <div>
+            <h1>THÔNG TIN BẢN MỆNH</h1>
+            <p>Tra cứu Tứ trụ, Mệnh quái, Bát trạch và Ngũ hành khuyết</p>
+        </div>
+    </div>
+
+    <div class="bm-input-area">
+        <div class="bm-input-box">
+            <label for="solarDate">Ngày dương lịch</label>
+            <input type="date" id="solarDate">
+        </div>
+        <div class="bm-input-box">
+            <label for="solarHour">Giờ</label>
+            <input type="number" id="solarHour" min="0" max="23" value="12">
+        </div>
+        <div class="bm-input-box">
+            <label for="gioitinh">Giới tính</label>
+            <select id="gioitinh">
+                <option value="nam">Nam</option>
+                <option value="nu">Nữ</option>
+            </select>
+        </div>
+        <div class="bm-input-action">
+            <button id="btnXem" class="btn-xem">Xem bản mệnh</button>
+        </div>
+    </div>
+
+    <section class="bm-section">
+        <h2>Tứ trụ - Can Chi và Nạp Âm</h2>
+        <div class="bm-table-wrap">
+            <table class="tbl">
+                <thead>
+                    <tr>
+                        <th>Trụ</th>
+                        <th>Thiên Can</th>
+                        <th>Địa Chi</th>
+                        <th>Nạp Âm</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Năm</td>
+                        <td id="canchinam">--</td>
+                        <td id="chinam">--</td>
+                        <td id="napamnam">--</td>
+                    </tr>
+                    <tr>
+                        <td>Tháng</td>
+                        <td id="canchithang">--</td>
+                        <td id="chithang">--</td>
+                        <td id="napamthang">--</td>
+                    </tr>
+                    <tr>
+                        <td>Ngày</td>
+                        <td id="canchingay">--</td>
+                        <td id="chingay">--</td>
+                        <td id="napamngay">--</td>
+                    </tr>
+                    <tr>
+                        <td>Giờ</td>
+                        <td id="canchigio">--</td>
+                        <td id="chigio">--</td>
+                        <td id="napamgio">--</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="bm-section">
+        <h2>Mệnh quái</h2>
+        <div class="bm-summary-grid">
+            <div class="bm-summary-item">
+                <span class="bm-label">Mệnh</span>
+                <strong id="menh">--</strong>
+            </div>
+            <div class="bm-summary-item">
+                <span class="bm-label">Ngũ hành</span>
+                <strong id="nguhanh">--</strong>
+            </div>
+            <div class="bm-summary-item">
+                <span class="bm-label">Phương</span>
+                <strong id="phuong">--</strong>
+            </div>
+            <div class="bm-summary-item">
+                <span class="bm-label">Số</span>
+                <strong id="so">--</strong>
+            </div>
+        </div>
+    </section>
+
+    <section class="bm-section">
+        <h2>Bát trạch</h2>
+        <div class="bm-table-wrap">
+            <table class="tbl">
+                <thead>
+                    <tr>
+                        <th>Càn<br>Tây Bắc</th>
+                        <th>Khảm<br>Bắc</th>
+                        <th>Cấn<br>Đông Bắc</th>
+                        <th>Chấn<br>Đông</th>
+                        <th>Tốn<br>Đông Nam</th>
+                        <th>Ly<br>Nam</th>
+                        <th>Khôn<br>Tây Nam</th>
+                        <th>Đoài<br>Tây</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="taybac">--</td>
+                        <td id="bac">--</td>
+                        <td id="dongbac">--</td>
+                        <td id="dong">--</td>
+                        <td id="dongnam">--</td>
+                        <td id="nam">--</td>
+                        <td id="taynam">--</td>
+                        <td id="tay">--</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="bm-section">
+        <h2>Lộc - Mã - Quý nhân - Văn Xương - Đào Hoa</h2>
+        <div class="bm-table-wrap">
+            <table class="tbl">
+                <thead>
+                    <tr>
+                        <th>Nội dung</th>
+                        <th>Theo năm</th>
+                        <th>Theo ngày</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mệnh Lộc</td>
+                        <td id="locnam">--</td>
+                        <td id="locngay">--</td>
+                    </tr>
+                    <tr>
+                        <td>Mệnh Mã</td>
+                        <td id="manam">--</td>
+                        <td id="mangay">--</td>
+                    </tr>
+                    <tr>
+                        <td>Quý âm</td>
+                        <td id="quyamnam">--</td>
+                        <td id="quyamngay">--</td>
+                    </tr>
+                    <tr>
+                        <td>Quý dương</td>
+                        <td id="quyduongnam">--</td>
+                        <td id="quyduongngay">--</td>
+                    </tr>
+                    <tr>
+                        <td>Văn Xương</td>
+                        <td id="vanxuongnam">--</td>
+                        <td id="vanxuongngay">--</td>
+                    </tr>
+                    <tr>
+                        <td>Đào Hoa</td>
+                        <td id="daohoanam">--</td>
+                        <td id="daohoangay">--</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section class="bm-section">
+        <h2>Ngũ hành khuyết</h2>
+        <div class="bm-chart">
+            <div class="bm-bar-container">
+                <div class="bm-bar" id="barKim"></div>
+                <span class="bm-percent" id="percentKim">0%</span>
+                <span class="bm-label">Kim</span>
+            </div>
+            <div class="bm-bar-container">
+                <div class="bm-bar" id="barThuy"></div>
+                <span class="bm-percent" id="percentThuy">0%</span>
+                <span class="bm-label">Thủy</span>
+            </div>
+            <div class="bm-bar-container">
+                <div class="bm-bar" id="barMoc"></div>
+                <span class="bm-percent" id="percentMoc">0%</span>
+                <span class="bm-label">Mộc</span>
+            </div>
+            <div class="bm-bar-container">
+                <div class="bm-bar" id="barHoa"></div>
+                <span class="bm-percent" id="percentHoa">0%</span>
+                <span class="bm-label">Hỏa</span>
+            </div>
+            <div class="bm-bar-container">
+                <div class="bm-bar" id="barTho"></div>
+                <span class="bm-percent" id="percentTho">0%</span>
+                <span class="bm-label">Thổ</span>
+            </div>
+        </div>
+    </section>
+</div>

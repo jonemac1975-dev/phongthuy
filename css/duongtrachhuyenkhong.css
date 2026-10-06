@@ -1,0 +1,105 @@
+.dthk-container{max-width:1100px;margin:0 auto;padding:20px;background:linear-gradient(145deg,#fffaf0,#f7efe0);color:#3b2a1f;font-family:Arial,sans-serif;border-radius:16px;box-shadow:0 8px 30px rgba(72,45,20,.12)}
+.dthk-header{text-align:center;padding:22px 18px;margin-bottom:20px;background:linear-gradient(135deg,#6f1d1b,#9e2a2b);color:#fff;border-radius:14px;box-shadow:0 6px 18px rgba(90,30,20,.2)}
+.dthk-header h1{margin:0 0 8px;font-size:25px;letter-spacing:.5px}
+.dthk-header p{margin:0;font-size:14px;line-height:1.6;color:#f9e7b8}
+.dthk-container section{margin-bottom:20px;padding:18px;background:#fff;border:1px solid #ead8b7;border-radius:12px;box-shadow:0 3px 12px rgba(80,50,20,.07)}
+.dthk-container h2{margin:0 0 14px;padding-bottom:9px;border-bottom:2px solid #c89b3c;color:#702020;font-size:20px}
+.dthk-container h3{margin:14px 0 8px;color:#7a4b12;font-size:17px}
+.dthk-container p{line-height:1.65}
+.dthk-container label{display:block;margin:8px 0 5px;font-weight:600;color:#5c3b20}
+.dthk-container input,.dthk-container select{width:100%;box-sizing:border-box;padding:10px 12px;border:1px solid #d8c29a;border-radius:8px;background:#fffdf8;color:#3b2a1f;font-size:15px;outline:none}
+.dthk-container input:focus,.dthk-container select:focus{border-color:#a87924;box-shadow:0 0 0 3px rgba(168,121,36,.12)}
+.dthk-container button{border:0;border-radius:8px;padding:10px 18px;background:#7b2020;color:#fff;font-weight:700;cursor:pointer;transition:.2s}
+.dthk-container button:hover{background:#9c2c2c;transform:translateY(-1px)}
+.dthk-container table{width:100%;border-collapse:collapse;margin-top:12px;background:#fff}
+.dthk-container th{background:#7b2020;color:#fff;padding:10px 8px;border:1px solid #8e3838;font-weight:700}
+.dthk-container td{padding:9px 8px;border:1px solid #eadbc2;text-align:center}
+.dthk-container tr:nth-child(even) td{background:#fffaf1}
+.dthk-container tr:hover td{background:#fff3d8}
+.dthk-container .grid,.dthk-container .row{gap:12px}
+.dthk-container .card{padding:14px;border:1px solid #ead8b7;border-radius:10px;background:#fffaf3}
+.dthk-container strong{color:#7b2020}
+.dthk-container .back-button{background:#5d4037;margin-bottom:16px;padding:8px 14px;font-size:14px}
+.dthk-container .back-button:hover{background:#795548}
+@media(max-width:768px){
+.dthk-container{padding:12px;margin:0;border-radius:10px}
+.dthk-header{padding:17px 12px}
+.dthk-header h1{font-size:20px;line-height:1.35}
+.dthk-header p{font-size:13px}
+.dthk-container section{padding:13px;margin-bottom:14px}
+.dthk-container h2{font-size:18px}
+.dthk-container h3{font-size:16px}
+.dthk-container table{font-size:13px}
+.dthk-container th,.dthk-container td{padding:7px 5px}
+}
+
+/* ================= VẬN BÀN 9 x 6 ================= */
+.vanban-wrapper{width:min(100%,760px);margin:0 auto;display:flex;flex-direction:column;align-items:center}
+.vanban-header,.vanban-footer{width:100%;display:grid;grid-template-columns:repeat(3,1fr)}
+.vanban-header>div,.vanban-footer>div{height:42px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;color:#fff;border:1px solid #fff}
+.vanban-header .cung-ton{background:#2e7d32}
+.vanban-header .cung-ly{background:#c62828}
+.vanban-header .cung-khon{background:#d69a18}
+.vanban-footer .cung-can2{background:#7b5e3b}
+.vanban-footer .cung-kham{background:#1565c0}
+.vanban-footer .cung-can{background:#5d4037}
+.vanban-middle{width:100%;display:grid;grid-template-columns:70px minmax(0,1fr) 70px;align-items:stretch}
+.middle-left,.middle-right{display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;color:#fff;writing-mode:vertical-rl;letter-spacing:2px}
+.middle-left{background:#43a047}
+.middle-right{background:#8e44ad}
+.vanban{display:grid;grid-template-columns:repeat(9,1fr);grid-template-rows:repeat(6,48px);border:2px solid #7b2020;background:#fff}
+.vbcell{display:flex;align-items:center;justify-content:center;border:1px solid #d8c8a8;font-size:18px;font-weight:700;box-sizing:border-box;background:#fffdf8}
+.vbcell:empty{background:#f8f1e5}
+.vbcell:nth-child(3n){border-right-color:#b99b63}
+.vbcell strong{font-size:20px}
+@media(max-width:768px){
+.vanban-wrapper{width:100%;overflow-x:auto;align-items:flex-start}
+.vanban-header,.vanban-footer{min-width:630px}
+.vanban-middle{min-width:630px;grid-template-columns:55px 520px 55px}
+.vanban{grid-template-rows:repeat(6,42px)}
+.vbcell{font-size:15px}
+.middle-left,.middle-right{font-size:12px}
+.vanban-header>div,.vanban-footer>div{height:36px;font-size:12px}
+}
+
+/* ================= MÀU 8 QUẺ THEO NGŨ HÀNH ================= */
+.vanban-header .cung-ton{background:#2e7d32}
+.vanban-header .cung-ly{background:#c62828}
+.vanban-header .cung-khon{background:#d69a18}
+.middle-left.cung-chan{background:#2e7d32}
+.middle-right.cung-doai{background:#777}
+.vanban-footer .cung-can2{background:#d69a18}
+.vanban-footer .cung-kham{background:#222}
+.vanban-footer .cung-can{background:#777}
+
+/* ================= THẦN SÁT - 24 SƠN ================= */
+.thansat-wrapper{width:100%;overflow-x:auto}
+.thansat-grid{display:grid;grid-template-columns:150px minmax(180px,1fr) minmax(180px,1fr);border:1px solid #d8c29a;border-radius:10px;overflow:hidden;background:#fff;min-width:600px}
+.ts-head{padding:11px 10px;background:#7b2020;color:#fff;text-align:center;font-weight:700;border-right:1px solid #a65a5a}
+.ts-cung{grid-column:1 / -1;padding:9px 12px;background:#d69a18;color:#fff;font-weight:700;border-top:1px solid #c58a12;border-bottom:1px solid #c58a12}
+.ts-cell,#ts_nham_cat,#ts_nham_hung,#ts_ti_cat,#ts_ti_hung,#ts_quy_cat,#ts_quy_hung,#ts_suu_cat,#ts_suu_hung,#ts_can_cat,#ts_can_hung,#ts_dan_cat,#ts_dan_hung,#ts_giap_cat,#ts_giap_hung,#ts_mao_cat,#ts_mao_hung,#ts_at_cat,#ts_at_hung,#ts_thin_cat,#ts_thin_hung,#ts_ton_cat,#ts_ton_hung,#ts_ti2_cat,#ts_ti2_hung,#ts_binh_cat,#ts_binh_hung,#ts_ngo_cat,#ts_ngo_hung,#ts_dinh_cat,#ts_dinh_hung,#ts_mui_cat,#ts_mui_hung,#ts_khon_cat,#ts_khon_hung,#ts_than_cat,#ts_than_hung,#ts_canh_cat,#ts_canh_hung,#ts_dau_cat,#ts_dau_hung,#ts_tan_cat,#ts_tan_hung,#ts_tuat_cat,#ts_tuat_hung,#ts_can2_cat,#ts_can2_hung,#ts_hoi_cat,#ts_hoi_hung{min-height:42px;box-sizing:border-box;padding:9px 10px;border-right:1px solid #eadbc2;border-bottom:1px solid #eadbc2;display:flex;align-items:center;justify-content:center;text-align:center}
+.ts-cell{font-weight:700;color:#6b4318;background:#fffaf1}
+.thansat-grid>div:nth-child(3n){border-right:0}
+.thansat-grid>div[id*="_cat"]{color:#2e7d32;background:#fbfff9}
+.thansat-grid>div[id*="_hung"]{color:#b71c1c;background:#fffafa}
+.thansat-grid>div[id*="_cat"]:empty,.thansat-grid>div[id*="_hung"]:empty{color:#aaa}
+.dthk-note{text-align:center;color:#806b52;font-size:13px;font-style:italic}
+@media(max-width:768px){
+.thansat-grid{grid-template-columns:100px 170px 170px;min-width:440px}
+.ts-head{font-size:13px;padding:9px 6px}
+.ts-cung{font-size:14px;padding:8px 10px}
+.ts-cell,#ts_nham_cat,#ts_nham_hung,#ts_ti_cat,#ts_ti_hung,#ts_quy_cat,#ts_quy_hung,#ts_suu_cat,#ts_suu_hung,#ts_can_cat,#ts_can_hung,#ts_dan_cat,#ts_dan_hung,#ts_giap_cat,#ts_giap_hung,#ts_mao_cat,#ts_mao_hung,#ts_at_cat,#ts_at_hung,#ts_thin_cat,#ts_thin_hung,#ts_ton_cat,#ts_ton_hung,#ts_ti2_cat,#ts_ti2_hung,#ts_binh_cat,#ts_binh_hung,#ts_ngo_cat,#ts_ngo_hung,#ts_dinh_cat,#ts_dinh_hung,#ts_mui_cat,#ts_mui_hung,#ts_khon_cat,#ts_khon_hung,#ts_than_cat,#ts_than_hung,#ts_canh_cat,#ts_canh_hung,#ts_dau_cat,#ts_dau_hung,#ts_tan_cat,#ts_tan_hung,#ts_tuat_cat,#ts_tuat_hung,#ts_can2_cat,#ts_can2_hung,#ts_hoi_cat,#ts_hoi_hung{min-height:38px;padding:7px 6px;font-size:13px}
+}
+
+.dthk-compass-section{text-align:center}
+.dthk-compass-wrapper{position:relative;width:360px;height:360px;margin:25px auto}
+.dthk-fixed-pointer{position:absolute;top:-14px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:12px solid transparent;border-right:12px solid transparent;border-top:25px solid #ff4d4d;z-index:10;filter:drop-shadow(0 2px 4px rgba(0,0,0,.7))}
+.dthk-compass-container{width:100%;height:100%;border-radius:50%;border:4px solid #c69b45;box-shadow:0 0 25px rgba(198,155,69,.35);overflow:hidden;position:relative;background:#1e1e1e}
+.dthk-compass-disc{width:100%;height:100%;border-radius:50%;background:url('https://phongthuyminhtuan.com/wp-content/uploads/2026/01/0045-scaled-e1768040243160-1200x1141.jpg') center/cover no-repeat;transform:rotate(180deg);transition:transform .8s cubic-bezier(.22,.61,.36,1)}
+.dthk-compass-info{display:inline-block;min-width:220px;padding:10px 25px;border-left:4px solid #c69b45;border-radius:8px;background:#3a2a22}
+#dthk-compass-deg{font-size:22px;font-weight:bold;color:#e8cc88}
+#dthk-compass-mountain{margin-top:4px;font-size:17px;font-weight:600;color:#f2d58e}
+@media(max-width:520px){
+.dthk-compass-wrapper{width:280px;height:280px;margin:20px auto}
+.dthk-compass-info{min-width:190px}
+}
