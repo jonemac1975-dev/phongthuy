@@ -430,6 +430,33 @@ function resetOutput(){
 }
 
 
+function updateCalendarPage(date){
+    const monthNames=["THÁNG 1","THÁNG 2","THÁNG 3","THÁNG 4","THÁNG 5","THÁNG 6","THÁNG 7","THÁNG 8","THÁNG 9","THÁNG 10","THÁNG 11","THÁNG 12"];
+    const weekNames=["CHỦ NHẬT","THỨ HAI","THỨ BA","THỨ TƯ","THỨ NĂM","THỨ SÁU","THỨ BẢY"];
+    const monthEl=document.querySelector(".lvn-calendar-month");
+    const dayEl=document.querySelector(".lvn-calendar-day");
+    const weekEl=document.querySelector(".lvn-calendar-week");
+    const lunarEl=document.querySelector(".lvn-calendar-lunar");
+    const canchiEl=document.querySelector(".lvn-calendar-canchi");
+
+    if(monthEl)monthEl.textContent=monthNames[date.getMonth()];
+    if(dayEl)dayEl.textContent=String(date.getDate()).padStart(2,"0");
+    if(weekEl)weekEl.textContent=weekNames[date.getDay()];
+
+    const lunarDay=document.getElementById("am-date")?.textContent.trim();
+    const lunarMonth=document.getElementById("am-month")?.textContent.trim();
+    const lunarYear=document.getElementById("am-year")?.textContent.trim();
+    const canNgay=document.getElementById("canamngay")?.textContent.trim();
+    const chiNgay=document.getElementById("chiamngay")?.textContent.trim();
+
+    if(lunarEl){
+        lunarEl.textContent=lunarDay&&lunarMonth&&lunarYear&&lunarDay!=="--"&&lunarMonth!=="--" ? `ÂM LỊCH • ${lunarDay} / ${lunarMonth} / ${lunarYear}` : "ÂM LỊCH";
+    }
+
+    if(canchiEl){
+        canchiEl.textContent=canNgay&&chiNgay&&canNgay!=="--"&&chiNgay!=="--" ? `${canNgay.toUpperCase()} ${chiNgay.toUpperCase()}` : "";
+    }
+}
 
 async function xemLich(){
     const inputDate=document.getElementById("inputDate");
@@ -501,12 +528,13 @@ async function xemLich(){
 	fillNamXungTuoi();
 	fillThangXungTuoi();
 	fillHuongNamTotXau();
+updateCalendarPage(new Date(year,month-1,day));
 	
 
         
     } catch(error) {
         console.error("❌ Lỗi xem lịch:",error);
-        alert("Không thể tính lịch. Vui lòng kiểm tra Console.");
+      //  alert("Không thể tính lịch. Vui lòng kiểm tra Console.");
     }
 }
 
@@ -535,4 +563,69 @@ setInterval(()=>{
     }
 },300);
 	await xemLich();
+const calendarStack=document.getElementById("lvn-calendar-stack");
+const calendarNext=document.getElementById("lvn-calendar-next");
+const calendarPrev=document.getElementById("lvn-calendar-prev");
+
+let calendarBusy=false;
+
+function getCalendarDate(){
+    const value=inputDate?.value;
+    if(!value)return new Date();
+    const [y,m,d]=value.split("-").map(Number);
+    return new Date(y,m-1,d);
+}
+
+function formatCalendarDate(date){
+    return `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,"0")}-${String(date.getDate()).padStart(2,"0")}`;
+}
+
+
+
+function flipCalendar(direction){
+    if(calendarBusy||!calendarStack||!inputDate)return;
+    calendarBusy=true;
+
+    const currentDate=getCalendarDate();
+    const newDate=new Date(currentDate);
+    newDate.setDate(newDate.getDate()+(direction==="next"?1:-1));
+
+    const currentSheet=calendarStack.querySelector(".lvn-calendar-current");
+    if(!currentSheet){
+        calendarBusy=false;
+        return;
+    }
+
+    currentSheet.classList.add(direction==="next"?"lvn-sheet-leaving-next":"lvn-sheet-leaving-prev");
+
+    setTimeout(async()=>{
+        inputDate.value=formatCalendarDate(newDate);
+        await xemLich();
+        calendarStack.innerHTML=`
+            <div class="lvn-calendar-page lvn-calendar-sheet" data-offset="2"></div>
+            <div class="lvn-calendar-page lvn-calendar-sheet" data-offset="1"></div>
+            <div class="lvn-calendar-page lvn-calendar-sheet lvn-calendar-current lvn-sheet-new">
+                <div class="lvn-calendar-head">
+                    <span>PHONG THỦY</span>
+                    <span>LỊCH VẠN NIÊN</span>
+                </div>
+                <div class="lvn-page-line"></div>
+	        <div class="lvn-calendar-month"></div>
+                <div class="lvn-calendar-day">${String(newDate.getDate()).padStart(2,"0")}</div>
+                <div class="lvn-calendar-week">${["CHỦ NHẬT","THỨ HAI","THỨ BA","THỨ TƯ","THỨ NĂM","THỨ SÁU","THỨ BẢY"][newDate.getDay()]}</div>
+                <div class="lvn-calendar-lunar">ÂM LỊCH</div>
+                <div class="lvn-calendar-canchi"></div>
+                <div class="lvn-page-symbol">☯</div>
+                <div class="lvn-calendar-footer">AN KHANG • THỊNH VƯỢNG</div>
+            </div>
+        `;
+updateCalendarPage(newDate);        
+calendarBusy=false;
+    },700);
+}
+
+calendarNext?.addEventListener("click",()=>flipCalendar("next"));
+calendarPrev?.addEventListener("click",()=>flipCalendar("prev"));
+
+updateCalendarPage(getCalendarDate());
 }

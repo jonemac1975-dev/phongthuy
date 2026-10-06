@@ -56,3 +56,80 @@
 .tbl td:first-child{width:120px}
 .lvn-result-box{font-size:12px}
 }
+
+.lvn-flip-calendar{text-align:center;margin:28px auto 38px;perspective:1400px}
+.lvn-calendar-holder{position:relative;width:310px;height:375px;margin:auto;z-index:2}
+.lvn-calendar-page{position:absolute;left:0;top:0;width:310px;height:350px;box-sizing:border-box;border-radius:5px 5px 8px 8px}
+.lvn-calendar-back{background:#e7d7b5;transform:translate(9px,8px) rotate(1.2deg);box-shadow:0 9px 18px rgba(45,25,15,.2)}
+.lvn-page-pattern{height:100%;display:flex;align-items:center;justify-content:center;font-size:110px;color:rgba(107,36,36,.12)}
+.lvn-calendar-front{z-index:3;padding:22px 25px;background:linear-gradient(145deg,#fffaf0,#f0dfbd);border:2px solid #a77b35;box-shadow:0 14px 28px rgba(45,25,15,.32);overflow:hidden}
+.lvn-calendar-front:before{content:"";position:absolute;inset:7px;border:1px solid rgba(167,123,53,.55);border-radius:3px;pointer-events:none}
+.lvn-calendar-head{position:relative;display:flex;justify-content:space-between;font-size:9px;font-weight:bold;letter-spacing:1.5px;color:#7d5b29}
+.lvn-page-line{height:1px;margin:12px 0 18px;background:linear-gradient(90deg,transparent,#b58b45,transparent)}
+.lvn-calendar-month{font-size:20px;font-weight:bold;letter-spacing:4px;color:#6b2424}
+.lvn-calendar-day{margin-top:0;font-family:Georgia,serif;font-size:112px;line-height:.95;font-weight:bold;color:#8c2020;text-shadow:2px 3px 2px rgba(80,40,20,.15)}
+.lvn-calendar-week{margin-top:8px;font-size:17px;font-weight:bold;letter-spacing:3px;color:#594735}
+.lvn-calendar-lunar{margin-top:19px;font-size:12px;color:#8a6834;letter-spacing:1px}
+.lvn-calendar-can chi{font-size:16px}
+.lvn-calendar-canchi{margin-top:7px;font-size:16px;font-weight:bold;letter-spacing:2px;color:#6b2424}
+.lvn-page-symbol{margin-top:8px;font-size:31px;color:#a77b35;line-height:1}
+.lvn-calendar-footer{position:absolute;left:0;right:0;bottom:22px;font-size:9px;letter-spacing:1.5px;color:#92713b}
+.lvn-calendar-ring{position:absolute;top:-8px;width:18px;height:18px;border:3px solid #b58b45;border-radius:50%;background:#33251e;z-index:5;box-shadow:0 1px 2px rgba(0,0,0,.4)}
+.lvn-ring-1{left:43px}
+.lvn-ring-2{right:43px}
+.lvn-calendar-base{position:relative;width:330px;height:45px;margin:-18px auto 0;z-index:1}
+.lvn-base-top{position:absolute;left:8px;right:8px;top:0;height:15px;border-radius:4px;background:linear-gradient(#8f6b35,#5d4020);border:1px solid #b58b45}
+.lvn-base-body{position:absolute;left:18px;right:18px;top:10px;height:35px;background:linear-gradient(90deg,#4a301d,#7b522b,#4a301d);clip-path:polygon(7% 0,93% 0,100% 100%,0 100%);box-shadow:0 5px 9px rgba(30,20,10,.3)}
+.lvn-calendar-controls{display:flex;justify-content:center;align-items:center;gap:22px;margin-top:12px;color:#806033;font-size:11px;font-weight:bold;letter-spacing:1.5px}
+.lvn-calendar-controls button{width:38px;height:32px;border:1px solid #b58b45;border-radius:6px;background:linear-gradient(#fffaf0,#ead7ad);color:#6b2424;font-size:15px;cursor:pointer;box-shadow:0 2px 5px rgba(50,35,20,.18);transition:.2s}
+.lvn-calendar-controls button:hover{transform:translateY(-2px);box-shadow:0 4px 8px rgba(50,35,20,.25)}
+@media(max-width:520px){
+.lvn-calendar-holder{width:260px;height:320px}
+.lvn-calendar-page{width:260px;height:295px}
+.lvn-calendar-front{padding:18px 20px}
+.lvn-calendar-day{font-size:88px}
+.lvn-calendar-month{font-size:17px}
+.lvn-calendar-week{font-size:14px}
+.lvn-calendar-lunar{margin-top:13px;font-size:10px}
+.lvn-calendar-canchi{font-size:14px}
+.lvn-page-symbol{margin-top:12px;font-size:25px}
+.lvn-calendar-footer{font-size:7px}
+.lvn-ring-1{left:34px}
+.lvn-ring-2{right:34px}
+.lvn-calendar-base{width:275px}
+}
+
+.lvn-calendar-stack{position:relative;width:310px;height:350px;margin:auto;perspective:1400px}
+.lvn-calendar-sheet{position:absolute;left:0;top:0;width:310px;height:350px;box-sizing:border-box;border-radius:5px 5px 8px 8px;background:linear-gradient(145deg,#fffaf0,#f0dfbd);border:2px solid #a77b35;box-shadow:0 12px 25px rgba(45,25,15,.28);overflow:hidden}
+.lvn-calendar-sheet[data-offset="2"]{transform:translate(12px,10px) rotate(1.4deg);background:#d9c39a;z-index:1}
+.lvn-calendar-sheet[data-offset="1"]{transform:translate(6px,5px) rotate(.7deg);background:#ead8b3;z-index:2}
+.lvn-calendar-sheet.lvn-calendar-current{z-index:3;padding:22px 25px}
+.lvn-calendar-sheet.lvn-calendar-current:before{content:"";position:absolute;inset:7px;border:1px solid rgba(167,123,53,.55);border-radius:3px;pointer-events:none}
+.lvn-calendar-head{position:relative;display:flex;justify-content:space-between;font-size:9px;font-weight:bold;letter-spacing:1.5px;color:#7d5b29}
+.lvn-page-line{height:1px;margin:12px 0 18px;background:linear-gradient(90deg,transparent,#b58b45,transparent)}
+.lvn-calendar-month{font-size:20px;font-weight:bold;letter-spacing:4px;color:#6b2424}
+.lvn-calendar-day{margin-top:8px;font-family:Georgia,serif;font-size:112px;line-height:.95;font-weight:bold;color:#8c2020;text-shadow:2px 3px 2px rgba(80,40,20,.15)}
+.lvn-calendar-week{margin-top:9px;font-size:17px;font-weight:bold;letter-spacing:3px;color:#594735}
+.lvn-calendar-lunar{margin-top:19px;font-size:12px;color:#8a6834;letter-spacing:1px}
+.lvn-calendar-canchi{margin-top:7px;font-size:16px;font-weight:bold;letter-spacing:2px;color:#6b2424}
+.lvn-page-symbol{margin-top:8px;font-size:31px;color:#a77b35;line-height:1}
+.lvn-calendar-footer{position:absolute;left:0;right:0;bottom:22px;font-size:9px;letter-spacing:1.5px;color:#92713b}
+.lvn-calendar-sheet.lvn-sheet-leaving-next{transform:translate(-360px,5px) rotate(-10deg);opacity:0;transition:transform .7s ease,opacity .7s ease}
+.lvn-calendar-sheet.lvn-sheet-leaving-prev{transform:translate(360px,5px) rotate(10deg);opacity:0;transition:transform .7s ease,opacity .7s ease}
+.lvn-calendar-sheet.lvn-sheet-new{animation:lvnSheetAppear .45s ease}
+@keyframes lvnSheetAppear{
+    from{transform:translateY(18px);opacity:0}
+    to{transform:translateY(0);opacity:1}
+}
+@media(max-width:520px){
+.lvn-calendar-stack{width:260px;height:295px}
+.lvn-calendar-sheet{width:260px;height:295px}
+.lvn-calendar-sheet.lvn-calendar-current{padding:18px 20px}
+.lvn-calendar-day{font-size:88px}
+.lvn-calendar-month{font-size:17px}
+.lvn-calendar-week{font-size:14px}
+.lvn-calendar-lunar{margin-top:13px;font-size:10px}
+.lvn-calendar-canchi{font-size:14px}
+.lvn-page-symbol{margin-top:12px;font-size:25px}
+.lvn-calendar-footer{font-size:7px}
+}
